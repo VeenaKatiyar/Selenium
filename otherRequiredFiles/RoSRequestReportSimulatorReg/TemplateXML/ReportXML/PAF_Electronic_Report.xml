@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="message"/>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="REPORT"/>
+        <identifier value="ABA21F0A42A5447A99FF787BBFE01BBB"/>
+        <timestamp value="2015-10-29T14:08:52"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="2"/>
+          <code value="diagnosticreport-provide"/>
+          <display value="PafRemissSvar"/>
+        </event>
+        <source>
+          <name value="1:KNeuroFys"/>
+          <endpoint value="1:KNeuroFys"/>
+        </source>
+        <destination>
+          <name value="RoS"/>
+          <endpoint value="RoS"/>
+        </destination>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <transactionResponse>
+      <status value="PARTIAL"/>
+    </transactionResponse>
+  </entry>
+  <entry>
+    <resource>
+      <DiagnosticReport>
+        <!-- The findings and interpretation of diagnostic tests performed on patient. 
+			and formatted representation of diagnostic reports. -->
+        <id value="0B492DF6-8734-4DC9-947B-2B2D0074173E"/>
+        <name>
+          <text value="PAF investigations"/>
+        </name>
+        <status value="partial"/>
+        <!-- The status of the diagnostic report as a whole. For status use http://www.hl7.org/fhir/2015May/diagnostic-report-status.html   -->
+        <issued value="2015-10-29T14:08:52"/>
+        <subject>
+          <reference value="Patient\192408079339"/>
+          <!-- reference to a patient although not a valid url - in future this could be a reference to a service in pas -->
+        </subject>
+        <performer>
+          <reference value="Organization\PAFSYS"/>
+          <!-- The performing system/organization that is responsible for the conclusion. -->
+        </performer>
+        <identifier>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <code value="ProviderLID"/>
+            </coding>
+          </type>
+          <value value="SEFVLL-00000013"/>
+        </identifier>
+        <!-- The provider id for the investigation and/or analysis -->
+        <identifier>
+          <use value="official"/>
+          <type>
+            <coding>
+              <code value="RID"/>
+              <!-- RID or ActivityGUI - this is RoS identifier for the order -->
+            </coding>
+          </type>
+          <value value="1A7EDB7447C341299B11AC9FAB50D54F"/>
+        </identifier>
+        <!-- The RoS internal Id for the ordered investigation and/or analysis -->
+        <serviceCategory>
+          <coding>
+            <system value="http://www.hl7.org/fhir/2015May/valueset-diagnostic-service-sections.html"/>
+            <code value="OTH"/>
+            <display value="FYS"/>
+          </coding>
+        </serviceCategory>
+        <!--  The section or category  of the diagnostic service that performs the examination e.g. biochemistry, hematology, MRI use http://www.hl7.org/fhir/2015May/valueset-diagnostic-service-sections.html 
+				      For Physiology use OTH (other) -->
+        <diagnosticDateTime value="2015-10-29T14:08:52"/>
+        <!-- The dateTime when an investigation was done (Utford_Datum)-->
+        <result>
+          <reference value="Observation\212"/>
+        </result>
+        <result>
+          <reference value="Observation\214"/>
+        </result>
+        <!-- a reference to result of an observation/investigation/analysis -->
+        <conclusion value="  ( &quot;  ( ) * +  latest 212 EKO STANDARD    2014-10-01    ( NR: 14-7 )Utfört av Fyslab umeå. Eko-dopplerkardiografisk undersökning av kardiell embolikälla:Samtliga hjärtrum är normalstora. Ordinär vänsterkammarfunktion. Aorta- och mitralisklaffarna är tunna och rör sig ordinärt. Med doppler registreras normala klaffunktioner. Inga tromber eller vegetationer synliga. Bedömning: Inga hållpunkter för kardiell embolikälla. Inga tromber eller vegetationer synliga. Undersökningen ger inga hållpunkter för endokardit.  UTFÖRT av  ingenjör Jan Möller SIGNERAT  2014-10-01  Läkare Johan Medicus  K202 EKOKARDIOGRAFI DOPPLER    2014--10-01    ( NR: 13-16161 )&lt;br/&gt;Normalstor vänsterkammare med global systolisk funktion i nedre delen av normalområdet, EF 50%. S-formad septum som basalt uppmäts till ca 14 mm (lätt hypertrofierat) och normaltjock bakvägg. Regionala väggrörelsestörningar enligt skiss ovan. Vänster förmak i övre delen av normalområdet och normalstor höger förmak. Normalstor högerkammare med god pumpförmåga. Aortaklaffen är tricuspid och sklerotisk, men har god öppningsrörelse, övriga klaffar tämligen gracila. Aortaroten är normalvid. Vena cava inferior är normalvid och varierar ordinärt vid inandning.&lt;br/&gt;&lt;br/&gt;Med doppler ses en lindrig aortainsufficiens och en obetydlig mitralisinsufficiens. Tecken till lindrig diastolisk dysfunktion som vid relaxationsstörning. &lt;br/&gt;&lt;br/&gt;Bedömning: Status post infarkt. Vänsterkammarens globala pumpförmåga verkar tämligen bra, EF  ca 50%. Inga signifikanta klaffvitier.&lt;br/&gt;&lt;br/&gt;Undersökningen visad för och godkänd av Öl Esmat Raouf.&lt;br/&gt;SIGNERAT  2014-10-01  Biomedicinsk analytiker Charlotta Håkansson    /CHA013   /JM."/>
+        <!-- Concise and clinically contextualized narrative interpretation of the diagnostic report. The conclusion of the investigation -->
+      </DiagnosticReport>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="212"/>
+        <code>
+          <!--   Kind of observation/investigation = EKO STANDARD   -->
+          <coding>
+            <system value="PAFVLL"/>
+            <!--   Just a dummy as we are not using any standard for this currently  -->
+            <code value="212"/>
+            <display value="EKO STANDARD"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="final"/>
+        <!--   Performers details as shown in RoS (TBD - if BT/PAF agrees to returns this to RoS)  -->
+        <performer>
+          <display value="Charlotta Håkansson"/>
+        </performer>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="214"/>
+        <code>
+          <!--   Kind of observation/investigation = SPIROMETRI   -->
+          <coding>
+            <system value="PAFVLL"/>
+            <!--   Just a dummy as we are not using any standard for this currently  -->
+            <code value="214"/>
+            <display value="SPIROMETRI"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="final"/>
+        <!--   Performers details as shown in RoS (TBD - if BT/PAF agrees to returns this to RoS)  -->
+        <performer>
+          <display value="Charlotta Håkansson"/>
+        </performer>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,77 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <type value="message"/>
+  <entry>
+    <response>
+      <status value="MOTTAGEN"/>
+    </response>
+  </entry>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="STATUS"/>
+        <timestamp value="2017-01-12T06:53:00+00:00"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="DSTU 1.0.2"/>
+          <code value="diagnosticreport-status"/>
+          <display value="MICRORemisSvarStatus"/>
+        </event>
+        <response>
+          <identifier value="8261E28BC3974171ABB316557FBCB997"/>
+          <code value="ok"/>
+        </response>
+        <source>
+          <name value="4:BLODCUL"/>
+          <endpoint value="4:BLODCUL"/>
+        </source>
+        <destination>
+          <name value="RoS_Inttest"/>
+          <endpoint value="RoS_Inttest"/>
+        </destination>
+        <data>
+          <reference value="OrderResponse/1"/>
+        </data>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OrderResponse>
+        <id value="1"/>
+        <identifier>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <code value="PROVIDERLID"/>
+            </coding>
+          </type>
+          <value value="SEFUME16-52"/>
+        </identifier>
+        <request>
+          <reference value="Order/8261E28BC3974171ABB316557FBCB997"/>
+        </request>
+        <date value="2017-01-12T06:53:00+00:00"/>
+        <orderStatus value="accepted"/>
+        <description value="Some text..."/>
+        <fulfillment>
+          <reference value="Observation/1"/>
+        </fulfillment>
+      </OrderResponse>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="1"/>
+        <status value="registered"/>
+        <code>
+          <coding>
+            <system value="MICRO"/>
+            <code value="BT4"/>
+            <display value="Blod 2 anaerob flaska"/>
+          </coding>
+        </code>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

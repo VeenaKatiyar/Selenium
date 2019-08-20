@@ -1,0 +1,77 @@
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <type value="message"/>
+  <entry>
+    <response>
+      <status value="MOTTAGEN"/>
+    </response>
+  </entry>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="STATUS"/>
+        <timestamp value="2016-10-15T09:59:31+00:00"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="DSTU 1.0.2"/>
+          <code value="diagnosticreport-status"/>
+          <display value="ImmunoRemissSvarStatus"/>
+        </event>
+        <response>
+          <identifier value="8261E28BC3974171ABB316557FBCB997"/>
+          <code value="ok"/>
+        </response>
+        <source>
+          <name value="1:IMMUNO"/>
+          <endpoint value="1:IMMUNO"/>
+        </source>
+        <destination>
+          <name value="RoS_Inttest"/>
+          <endpoint value="RoS_Inttest"/>
+        </destination>
+        <data>
+          <reference value="OrderResponse/1"/>
+        </data>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OrderResponse>
+        <id value="1"/>
+        <identifier>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <code value="PROVIDERLID"/>
+            </coding>
+          </type>
+          <value value="SEFUME16-52"/>
+        </identifier>
+        <request>
+          <reference value="Order/9E2E314BB3124E3E8F9E4FF2608DF481"/>
+        </request>
+        <date value="2016-10-15T09:59:31+00:00"/>
+        <orderStatus value="accepted"/>
+        <description value="Some text..."/>
+        <fulfillment>
+          <reference value="Observation/1"/>
+        </fulfillment>
+      </OrderResponse>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="1"/>
+        <status value="registered"/>
+        <code>
+          <coding>
+            <system value="IMMUNOLOGY"/>
+            <code value="ENA"/>
+            <display value="ENA Screen (FEIA)"/>
+          </coding>
+        </code>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+	<type value="message"/>
+	<entry>
+		<response>
+			<status value="MODIFIERAD"/>
+		</response>
+	</entry>
+	<entry>
+		<resource>
+			<MessageHeader>
+				<id value="REPORT"/>
+				<timestamp value="2017-03-31T07:42:31+00:00"/>
+				<event>
+					<system value="http://hl7.org/fhir/message-type"/>
+					<version value="DSTU 1.0.2"/>
+					<code value="DiagnosticReport"/>
+					<display value="MICRORemisSvar"/>
+				</event>
+				<response>
+					<identifier value="ABA21F0A42A5447A99FF787BBFE01BBB"/>
+					<code value="ok"/>
+				</response>
+				<source>
+					<name value="1:MICRO"/>
+					<endpoint value="1:MICRO"/>
+				</source>
+				<destination>
+					<name value="RoS"/>
+					<endpoint value="RoS"/>
+				</destination>
+				<data>
+					<reference value="DiagnosticReport/1"/>
+				</data>
+			</MessageHeader>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<DiagnosticReport>
+				<id value="1"/>
+				<identifier>
+					<use value="secondary"/>
+					<type>
+						<coding>
+							<code value="PROVIDERLID"/>
+						</coding>
+					</type>
+					<value value="1233356"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="RID"/>
+						</coding>
+					</type>
+					<value value="5AE429A6A4F74FD1B7290F8AF5BD8695"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="BIOBANKINFO"/>
+						</coding>
+					</type>
+					<value value="Biobank information"/>
+				</identifier>
+				<status value="registered"/>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+						<code value="MB"/>
+						<display value="Microbiology"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="MICRO"/>
+						<code value="BLOD"/>
+						<display value="BloodCulture"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/192408079339"/>
+				</subject>
+				<effectiveDateTime value="2017-03-31T07:42:31+00:00"/>
+				<issued value="2017-03-31T07:42:31+00:00"/>
+				<performer>
+					<reference value="Practitioner/1"/>
+				</performer>
+				<result>
+					<reference value="Observation/215"/>
+				</result>
+				<!-- <result> -->
+					<!-- <reference value="Observation/216"/> -->
+				<!-- </result> -->
+				<conclusion value=" Comments from provider."/>
+				<codedDiagnosis>
+					<coding>
+						<code value="RI"/>
+						<display value="RI comments1 from Provider. RI comments1 from Provider .RI comments1 from Provider . RI comments1 from Provider . RI comments1 from Provider . RI comments1 from Provider . RI comments1 from Provider . RI comments1 from Provider  &#xD;&#xA; line break RI comments2 from Provider &#xA; line break RI comments3 from Provider "/>
+					</coding>
+				</codedDiagnosis>
+				<codedDiagnosis>
+					<coding>
+						<code value="RP"/>
+						<display value="RP comments from Provider "/>
+					</coding>
+				</codedDiagnosis>
+				<codedDiagnosis>
+					<coding>
+						<code value="RP"/>
+						<display value="RP comments1 from Provider. RP comments1 from Provider. RP comments1 from Provider. RP comments1 from Provider RP comments1 from Provider RP comments1 from Provider RP comments1 from Provider  &#xA; line break RP comments2 from Provider"/>
+					</coding>
+				</codedDiagnosis>
+			
+				<codedDiagnosis>
+					<coding>
+						<code value="RU"/>
+						<display value="RU comments from Provider without line break."/>
+					</coding>
+				</codedDiagnosis>
+			</DiagnosticReport>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="200"/>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="MICRO"/>
+						<code value="March24"/>
+						<display value="LinkedMarch24"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/150"/>
+				</performer>
+				<comments value="Investigation comments for LinkedMarch24"/>
+				<related>
+					<type value="has-member"/>
+					<target>
+						<reference value="Observation/215"/>
+					</target>
+				</related>
+			</Observation>
+		</resource>
+	</entry>
+
+	<entry>
+		<resource>
+			<Observation>
+				<id value="215"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="PATHOMARK"/>
+						</coding>
+					</type>
+					<value value="*"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="MICRO"/>
+						<code value="AnaA"/>
+						<display value="Analysis A"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/150"/>
+				</performer>
+				<interpretation>
+					<coding>
+						<code value="AI"/>
+						<display value="AI comments"/>
+					</coding>
+					<coding>
+						<code value="AD"/>
+						<display value="AD comments "/>
+					</coding>
+					<coding>
+						<code value="AMT"/>
+						<display value="AMT comments  "/>
+					</coding>
+					<coding>
+						<code value="AE"/>
+						<display value="AE comments"/>
+					</coding>
+					<coding>
+						<code value="AK"/>
+						<display value="Analysis comment1 AK comment1 AK 215 &#xD;&#xA; line break Analysis comment2 AK 215"/>
+					</coding>
+					<coding>
+						<code value="AT"/>
+						<display value="Analysis comment1 AT 215 &#xA; line break Analysis comment2 AT 215"/>
+					</coding>
+				</interpretation>
+			
+				<specimen>
+					<reference value="Specimen/100000029393"/>
+				</specimen>
+				<related>
+					<type value="derived-from"/>
+					<target>
+						<reference value="Observation/200"/>
+					</target>
+				</related>
+				<related>
+					<type value="qualified-by"/>
+					<target>
+						<reference value="Observation/215.15"/>
+					</target>
+				</related>
+				<related>
+					<type value="qualified-by"/>
+					<target>
+						<reference value="Observation/215.18"/>
+					</target>
+				</related>
+				<related>
+					<type value="qualified-by"/>
+					<target>
+						<reference value="Observation/215.21"/>
+					</target>
+				</related>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="215.21"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="FINDINGNUMBER"/>
+						</coding>
+					</type>
+					<value value="1"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="FINDING"/>
+						<code value="GMS"/>
+						<display value="No Growth 215.21"/>
+					</coding>
+					
+				</code>
+			
+			<comments value="Comment Text for 215.21 "/>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="215.15"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="FINDINGNUMBER"/>
+						</coding>
+					</type>
+					<value value="1"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="FINDING"/>
+						<code value="EE"/>
+						<display value="215.15"/>
+					</coding>
+				</code>
+				<interpretation>
+					<coding>
+						<system value="CulComment"/>
+						<code value="FP"/>
+						<display value="culcomment1 for 215.15 . culcomment2 for 215.15. culcomment3 for 215.15. culcomment4 for 215.15. culcomment5 for 215.15. culcomment6 for 215.15 &#xA;line break 1 &#xD;&#xA; line break2 "/>
+					</coding>
+				</interpretation>
+				<comments value="Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15 v Finding comments for 215.15 Finding comments for 215.15 Finding comments for 215.15&#xD;&#xA; line break1 &#xA; line break2"/>
+				
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="MIC"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="R"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar MIC 2"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.34 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+			
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar 0.33 mg/L"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.33 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				
+				
+			
+				
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="MEL"/>
+							<display value="Pivmecillinam"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.125 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+					
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="MZP"/>
+							<display value="Miperacillin-tazobactam"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.11 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="TZP"/>
+							<display value="Piperacillin-tazobactam"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.11 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+			
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="215.18"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="FINDINGNUMBER"/>
+						</coding>
+					</type>
+					<value value="1"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="FINDING"/>
+						<code value="EE"/>
+						<display value="215.18"/>
+					</coding>
+				</code>
+				<interpretation>
+					<coding>
+						<system value="CulComment"/>
+						<code value="FP"/>
+						<display value="culcomment for 215.18"/>
+					</coding>
+				</interpretation>
+				<comments value="Finding comments for 215.18"/>
+				
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="MIC"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="I"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.31 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="R"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar 0.33 mg/L"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.33 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="MIC"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="I"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar for 0.6 mg/L"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.6 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="MEL"/>
+							<display value="Pivmecillinam"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.125 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="TZP"/>
+							<display value="Piperacillin-tazobactam"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.11 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+		
+			</Observation>
+		</resource>
+	</entry>
+
+	<entry>
+		<resource>
+			<Observation>
+				<id value="216"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="PATHOMARK"/>
+						</coding>
+					</type>
+					<value value="*"/>
+				</identifier>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="ISACCREDITED"/>
+						</coding>
+					</type>
+					<value value="TRUE"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="MICRO"/>
+						<code value="AnaB"/>
+						<display value="Analysis B"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/200"/>
+				</performer>
+				<interpretation>
+					<coding>
+						<code value="AI"/>
+						<display value="Analysis comment 1"/>
+					</coding>
+					<coding>
+						<code value="AK"/>
+						<display value="Analysis comment 2"/>
+					</coding>
+				</interpretation>
+				<comments value="Analysis 216 comments"/>
+				<specimen>
+					<reference value="Specimen/100000029394"/>
+				</specimen>
+				<related>
+					<type value="qualified-by"/>
+					<target>
+						<reference value="Observation/216.1"/>
+					</target>
+				</related>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="216.1"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="FINDINGNUMBER"/>
+						</coding>
+					</type>
+					<value value="1"/>
+				</identifier>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="FINDING"/>
+						<code value="FF"/>
+						<display value="216.1 value"/>
+					</coding>
+				</code>
+				<interpretation>
+					<coding>
+						<system value="CulComment"/>
+						<code value="FP"/>
+						<display value="culcomment for 216.1"/>
+					</coding>
+				</interpretation>
+				<comments value="Finding comments"/>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="IPM"/>
+							<display value="Imipenem"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.125 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="MEM"/>
+							<display value="Meropenem"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.122 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CAZ"/>
+							<display value="Ceftazidim"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="R"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.41 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+				<component>
+					<code>
+						<coding>
+							<system value="ANTIBIOTIC"/>
+							<code value="CIP"/>
+							<display value="Ciprofloxacin"/>
+						</coding>
+					</code>
+					<valueCodeableConcept>
+						<coding>
+							<code value="RESISTENCETYPE"/>
+							<display value="ZON"/>
+						</coding>
+						<coding>
+							<code value="SIR"/>
+							<display value="S"/>
+						</coding>
+						<coding>
+							<code value="COMMENTS"/>
+							<display value="kommentar"/>
+						</coding>
+						<coding>
+							<code value="MEASUREMENT"/>
+							<display value="0.2 mg/L"/>
+						</coding>
+					</valueCodeableConcept>
+				</component>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Specimen>
+				<id value="100000029393"/>
+				<type>
+					<text value="Blod"/>
+				</type>
+				<subject>
+					<reference value="Patient/192408079339"/>
+				</subject>
+				<collection>
+					<collectedDateTime value="2017-03-31T07:42:31+00:00"/>
+				</collection>
+				<container>
+					<description value="Sample PP comment1 100000029393. &#xD;&#xA; line break Sample PP comment2 100000029393.&#xA; line break Sample PP comment3 100000029393"/>
+				</container>
+			</Specimen>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Specimen>
+				<id value="100000029394"/>
+				<type>
+					<text value="Blod"/>
+				</type>
+				<subject>
+					<reference value="Patient/192408079339"/>
+				</subject>
+				<collection>
+					<collectedDateTime value="2017-03-31T07:42:31+00:00"/>
+				</collection>
+					<container>
+					<description value="Sample PP comment1 100000029394. Sample PP comment2 100000029394.Sample PP comment3 100000029394 . Sample PP comment4 100000029394. Sample PP comment5 100000029394.Sample PP comment6 100000029394."/>
+				</container>
+			</Specimen>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Patient>
+				<id value="192408079339"/>
+				<identifier>
+					<use value="official"/>
+					<value value="192408079339"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value=" Hansen Test1 Ada Karolina"/>
+					<family value="Hansen Test1"/>
+					<given value="Ada Karolina"/>
+				</name>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="1"/>
+				<identifier>
+					<use value="usual"/>
+					<value value="1"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value="Area Manager / Signing Physician Signature"/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="150"/>
+				<identifier>
+					<use value="usual"/>
+					<value value="2"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value="BMA Signature"/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="200"/>
+				<identifier>
+					<use value="usual"/>
+					<value value="3"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value="BMA Signature"/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+</Bundle>

@@ -1,0 +1,34 @@
+package com.tieto.testcases;
+
+import org.testng.annotations.Test;
+
+import com.tieto.pages.LoginPage;
+import com.tieto.utilities_COMMON.LogUtils;
+import com.tieto.utilities_COMMON.Utils;
+
+
+public class Gmail_Login {
+	@Test(priority = 0)
+	public void TC001_Login() throws Exception
+	{
+		logger = report.startTest("TC_001_Login to QMS System");
+		
+		/////////////////////////////
+		//parent=resultReport.startTest("TC_001_Login to QMS System");
+		////////////////////////////
+		
+		LoginPage Login_Page = new LoginPage(driver);
+		
+		LogUtils.info("Logging into the QMS system. Test Case is TC001_Login ");
+		
+		String sHomepageURL = "http://qmstest.demo.tieto.com/KMS/Login.aspx";
+		// Thread.sleep(5000);
+		Utils.Wait.waitForPageLoadJS();
+		sa.assertEquals(driver.getCurrentUrl(), sHomepageURL);
+		System.out.println(driver.getCurrentUrl());
+		Login_Page.login();
+		sa.assertAll();
+
+	}
+
+}

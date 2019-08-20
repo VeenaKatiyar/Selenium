@@ -1,0 +1,88 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        body {
+            font-family: verdana,arial,sans-serif;
+            font-size: 14px;
+        }
+
+        table.altrowstable {
+            font-family: verdana,arial,sans-serif;
+            font-size: 14px;
+            color: #333333;
+            border-width: 2px;
+            border-color: #000000;
+            border-style: solid;
+            border-collapse: collapse;
+            background: #cde4f2;
+            align-content: center;
+            text-align: center;
+        }
+
+            table.altrowstable th {
+                border-width: 2px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #000000;
+                align-content: center;
+                background: #a2a4a5;
+            }
+
+            table.altrowstable td {
+                border-width: 2px;
+                padding: 8px;
+                border-style: solid;
+                border-color: #000000;
+                align-content: center;
+            }
+
+        table.resultCount td {
+            font-family: verdana,arial,sans-serif;
+            font-size: 12px;
+            border-width: 2px;
+            padding: 5px;
+            border-style: solid;
+            border-color: #000000;
+            align-content: center;
+            padding-left: 10px;
+            background-clip: padding-box;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding-left:15px; padding-top:15px">
+        <div>
+            Hi, <br />
+            &nbsp;&nbsp; Please find below daily regression test Results: <br /><br />
+        </div>
+
+        <table class="resultCount" Style="Width:40%">
+            <tr>
+                <td style="background:#2E86C1;color:White"><b>Total: #TotalTC</b></td>
+                <td style="background:#1D8348;color:White"><b>Passed: #PassedTC</b></td>
+                <td style="background:#CB4335;color:White"><b>Failed: #FailedTC</b></td>
+            </tr>
+        </table>
+        <br />
+        <table class="altrowstable" id="alternatecolor">
+            <tr>
+                <th><b>Sr.No.</b></th>
+                <th><b>Test Name</b></th>
+                <th><b>Status</b></th>
+                <th><b>Description</b></th>
+                
+            </tr>
+            #DataRow
+        </table>
+        <br />
+        <div style="color:black">
+            For more detailed test results please click #TestResultLink
+            <br /><br />
+            <b>Regards,</b> <br />
+            RoSAdminAgent
+        </div>
+    </div>
+</body>
+</html>

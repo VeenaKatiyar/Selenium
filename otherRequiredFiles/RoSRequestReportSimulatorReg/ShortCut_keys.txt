@@ -1,0 +1,17 @@
+##############  Tab control #############
+Tab1 Ctrl + Q
+Tab2 Ctrl + R
+Tab3 Ctrl + K
+Tab4 Ctrl + D
+
+
+######### Report Control #############
+
+Pap Alt + P	chkPapReq
+Dis Alt + D 	cmbDiscipline
+Typ Alt + T	cmbResponseType
+RID Alt + R	txtRID
+LID Alt + I	txtLID
+Sta Alt + S	cmbResponseState
+Cre Alt + C	btnStartReport
+Tra Alt + L	txtTrace

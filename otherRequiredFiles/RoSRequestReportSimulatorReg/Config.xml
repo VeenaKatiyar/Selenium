@@ -1,0 +1,16 @@
+<Config>
+<AuthenticationWS>http://VLLRegApp8XX.hcwtestsaas.local/PasLink/AuthenticationWS/AuthenticationWS.asmx</AuthenticationWS>
+<UserName>imxros</UserName>
+<Password>info11</Password>
+<SystemCode></SystemCode>
+<UnitId></UnitId>
+<CSLSection></CSLSection>
+<Ticket>Cf72aOsgVdsjB0QnUf+Qj1APPGA2gYdP/dmmJ6BsZLPM8YBGqXdOebbG/qY2LeMzhKrdqbRD4EORcPUuhceT9ZMtkT8jpvL+ynbSwn2iqlZHwVO36BfNFyAp1p4qBZfk7kWZfL5oZZo67qpcvebTyc8S4w/6SBYyTxo/XHsyvuf+57nkQs+85I0FU3fhcklxu7qjo/mIX0MiaBqII8pVg6SO+NFffsbAr0oj+ROCf/lyzeJs8fKJrg==</Ticket>
+<ActivityWS>http://VLLRegApp8XX.hcwtestsaas.locall/RosLink/ActivityWS/ActivityWS.asmx</ActivityWS>
+<ServiceCatalogueWS>http://VLLRegApp8XX.hcwtestsaas.local/RoSLink/ServiceCatalogueWS/ServiceCatalogueWS.asmx</ServiceCatalogueWS>
+<RoSExternalWS>http://VLLRegGW8XX.hcwtestsaas.local/RoSExternalWS/ExternalWS.asmx</RoSExternalWS>
+<AuthKey>Token1</AuthKey>
+<MessageFactoryUrl>http://VLLRegApp8XX.hcwtestsaas.local/RoSLink/MessageFactoryWS/MessageFactoryWS.asmx</MessageFactoryUrl>
+<ImmRequisitionPath></ImmRequisitionPath>
+<MBRequisitionPath></MBRequisitionPath>
+</Config>

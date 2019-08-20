@@ -1,0 +1,119 @@
+﻿<Message p1:schemaLocation="http://www.kith.no/xmlstds/labsvar/2008-12-01 svar-v13.xsd" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema.xsd" xmlns="http://www.kith.no/xmlstds/labsvar/2008-12-01">
+  <Type V="S" DN="Svarrapport" />
+  <MIGversion>v1.3 2008-12-01</MIGversion>
+  <GenDate V="2016-01-28T16:36:40" />
+  <MsgId>c2de0a4c-ea9e-4562-8ccf-74c8d6dd71az</MsgId>
+  <ServReport>
+    <ServType V="N" DN="Ny" />
+    <IssueDate V="2016-01-28T16:42:40" />
+    <Status V="F" DN="Endelig rapport" />
+    <MsgDescr V="CLIN" DN="Klinisk kjemi" />
+    <ServProvId>201601280554</ServProvId>
+    <Comment>Prøvene er bestilt som ø.hjelp.</Comment>
+    <ServReq>
+      <ServType V="N" DN="Ny" />
+      <IssueDate V="2015-11-19T13:28:05" />
+      <MsgDescr V="CLIN" DN="Klinisk kjemi" />
+      <Id>01D19A84DC3E4858B3BC098899FFBBE8</Id>
+      <RequestedPrioReport V="NORM" DN="Normal" />
+    </ServReq>
+    <Patient>
+      <Name>Hansen Test1 Ada Karolina</Name>
+      <OffId>192705137822</OffId>
+      <TypeOffId V="FNR" DN="Fødselsnummer" />
+      <AnalysedSubject>
+        <CollectedSample>
+          <CollectedDate V="2016-01-27T13:47:05" />
+        </CollectedSample>
+        <Type V="RutinKemi" />
+        <IdByServProvider>34015568</IdByServProvider>
+        <Comment>Sample Comments 2015-10-16</Comment>
+      </AnalysedSubject>
+      <ResultItem>
+        <NumResult>
+          <NumResultValue V="10.1" />
+          <RoSNumResultValue U="" V="6,1" />
+          <RoSNumResultValue U="" V="10,1" />
+        </NumResult>
+        <RefInterval>
+          <Descr />
+        </RefInterval>
+        <Investigation>
+          <Id S="2.16.578.1.12.4.1.1.8212" V="CRP" DN="P-CRP" OT="CRP" />
+        </Investigation>
+        <Comment>Test Comments 11-21-2015</Comment>
+        <DevResultInd V="1" DN="Over øvre ref.område" />
+        <RefAnalysedSubject>340106590001</RefAnalysedSubject>
+        <Accredited V="false" />
+        <ServType V="N" DN="NEW" />
+      </ResultItem>
+      <ResultItem>
+        <NumResult>
+          <NumResultValue U="mmol/L" V="139" />
+          <RoSNumResultValue U="mmol/L" V="139" />
+          <RoSNumResultValue U="mmol/L" V="139" />
+        </NumResult>
+        <RefInterval>
+          <Descr>136-146</Descr>
+        </RefInterval>
+        <Investigation>
+          <Id S="2.16.578.1.12.4.1.1.8212" V="NA" DN="P--Natrium" OT="Na" />
+        </Investigation>
+        <Comment>Test Comments 2 10-16-2015</Comment>
+        <RefAnalysedSubject>340106590001</RefAnalysedSubject>
+        <Accredited V="true" />
+        <ServType V="N" DN="NEW" />
+      </ResultItem>
+      <ResultItem>
+        <NumResult>
+          <NumResultValue U="mmol/L" V="" />
+          <RoSNumResultValue U="mmol/L" V="" />
+        </NumResult>
+        <RefInterval>
+          <Descr>3,3-4,6</Descr>
+        </RefInterval>
+        <Investigation>
+          <Id S="2.16.578.1.12.4.1.1.8212" V="K" DN="P--Kalium" OT="K" />
+        </Investigation>
+        <RefAnalysedSubject>340106590001</RefAnalysedSubject>
+        <Accredited V="false" />
+        <ServType V="N" DN="NEW" />
+      </ResultItem>
+    </Patient>
+    <ServProvider>
+      <Role V="SPR" DN="Tjenesteyter" />
+      <HCP>
+        <Inst>
+          <Name>Laboratoriemedicin vid Universitetssjukhuset i Umeå</Name>
+          <Id>1:LO</Id>
+          <TypeId V="ENH" DN="Organisasjonsnummeret i Enhetsregisteret" />
+          <Dept>
+            <Name>Klinisk Kemi</Name>
+            <Id>TE_NSL</Id>
+            <TypeId V="LOK" DN="LOKAL IDENTIFIKATOR UTEN NÆRMERE ANGIVELSE" />
+          </Dept>
+        </Inst>
+      </HCP>
+    </ServProvider>
+    <Requester>
+      <Role V="REQ" DN="Rekvirent" />
+      <HCP>
+        <Inst>
+          <Name>Klinisk Kemi</Name>
+          <Id>1:LO</Id>
+          <TypeId V="ENH" DN="Organisasjonsnummeret i Enhetsregisteret" />
+          <Dept>
+            <Name>Kirurg avd 1</Name>
+            <Id>USKIR1:LO</Id>
+            <TypeId V="LOK" DN="LOKAL IDENTIFIKATOR UTEN NÆRMERE ANGIVELSE" />
+          </Dept>
+          <HCPerson>
+            <Name>Eva Jonsson</Name>
+            <Id>1068</Id>
+            <TypeId V="HPR" DN="HPR-nummer" />
+          </HCPerson>
+        </Inst>
+      </HCP>
+    </Requester>
+  </ServReport>
+</Message>

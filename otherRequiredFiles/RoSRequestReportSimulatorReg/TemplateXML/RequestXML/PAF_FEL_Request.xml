@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="transaction-response"/>
+  <entry>
+    <transactionResponse>
+      <status value="FEL"/>
+    </transactionResponse>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome xmlns="http://hl7.org/fhir">
+        <id value="E456E178F0704D739728D12DA2D80E32"/>
+        <issue>
+          <severity value="error"/>
+          <code>
+            <coding>
+              <code value="exception"/>
+            </coding>
+          </code>
+          <details value="The code &quot;W&quot; in the system &quot;http://acme.com/intranet/fhir/codesystems/gender&quot; is not known (source = Acme.Interop.FHIRProcessors.Patient.processGender)"/>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>

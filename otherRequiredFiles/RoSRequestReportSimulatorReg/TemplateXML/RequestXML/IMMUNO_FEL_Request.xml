@@ -1,0 +1,51 @@
+﻿<Bundle xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <type value="transaction-response"/>
+  <entry>
+    <response>
+      <status value="FEL"/>
+    </response>
+  </entry>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="STATUS"/>
+        <timestamp value="2016-04-11T09:59:31+00:00"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="DSTU 1.0.2"/>
+          <code value="diagnosticreport-status"/>
+          <display value="ImmunoRemissSvarStatus"/>
+        </event>
+        <response>
+          <identifier value="8261E28BC3974171ABB316557FBCB997"/>
+          <code value="ok"/>
+        </response>
+        <source>
+          <name value="1:IMMUNO"/>
+          <endpoint value="1:IMMUNO"/>
+        </source>
+        <destination>
+          <name value="RoS_Inttest"/>
+          <endpoint value="RoS_Inttest"/>
+        </destination>
+        <data>
+          <reference value="OperationOutcome/F890581EF7504455BE71F196A81BE0BC"/>
+        </data>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <OperationOutcome xmlns="http://hl7.org/fhir">
+        <id value="F890581EF7504455BE71F196A81BE0BC"/>
+        <issue>
+          <severity value="error"/>
+          <code value="exception"/>
+          <details>
+            <text value="Unable to parse the requisition xml."/>
+          </details>
+        </issue>
+      </OperationOutcome>
+    </resource>
+  </entry>
+</Bundle>

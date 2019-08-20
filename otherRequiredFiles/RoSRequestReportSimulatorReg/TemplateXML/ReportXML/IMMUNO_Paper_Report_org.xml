@@ -1,0 +1,490 @@
+<Bundle xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns="http://hl7.org/fhir">
+	<type value="message"/>
+	<entry>
+		<response>
+			<status value="MODIFIERAD"/>
+		</response>
+	</entry>
+	<entry>
+		<resource>
+			<MessageHeader>
+				<id value="REPORT"/>
+				<timestamp value="2017-05-10T09:05:31+00:00"/>
+				<event>
+					<system value="http://hl7.org/fhir/message-type"/>
+					<version value="DSTU 1.0.2"/>
+					<code value="DiagnosticReport"/>
+					<display value="ImmunologiRemisSvar"/>
+				</event>
+				<response>
+					<identifier value="ABA21F0A42A5447A99FF787BBFE01BBB"/>
+					<code value="ok"/>
+				</response>
+				<source>
+					<name value="1:IMMUNO"/>
+					<endpoint value="1:IMMUNO"/>
+				</source>
+				<destination>
+					<name value="RoS"/>
+					<endpoint value="RoS"/>
+				</destination>
+				<data>
+					<reference value="DiagnosticReport/1"/>
+				</data>
+			</MessageHeader>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<DiagnosticReport>
+				<id value="1"/>
+				<identifier>
+					<use value="secondary"/>
+					<type>
+						<coding>
+							<code value="PROVIDERLID"/>
+						</coding>
+					</type>
+					<value value="1233356"/>
+				</identifier>
+				<status value="registered"/>
+				<category>
+					<coding>
+						<system value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+						<code value="MB"/>
+						<display value="Microbiology"/>
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system value="IMMUNOLOGY"/>
+						<code value="IMM"/>
+						<display value="Immunology"/>
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/-190805898780"/>
+				</subject>
+				<effectiveDateTime value="2017-05-10T09:05:31+00:00"/>
+				<issued value="2017-05-10T09:05:31+00:00"/>
+				<performer>
+					<reference value="Practitioner/1"/>
+				</performer>
+				<request>
+					<reference value="Order/IMM"/>
+				</request>
+				<result>
+					<reference value="Observation/217"/>
+				</result>
+				<result>
+					<reference value="Observation/215"/>
+				</result>
+				<result>
+					<reference value="Observation/214"/>
+				</result>
+				<conclusion value=" Comments from provider."/>
+				<!-- V 0.7 :: This will have sort order as: "RP", "RU", "RI". These comments will appear under "Report Comments" heading. -->
+				<codedDiagnosis>
+					<coding>
+						<code value="RI"/>
+						<display value="RI comments RI comments RI comments RI comments RI comments RI comments  &#xD;&#xA; line break &#xA; line break 1"/>
+					</coding>
+				</codedDiagnosis>
+				<codedDiagnosis>
+					<coding>
+						<code value="RP"/>
+						<display value="RP comments  RP comments RP comments RP comments RP comments RP comments RP comments &#xD;&#xA; line break &#xA; line break 1"/>
+					</coding>
+				</codedDiagnosis>
+				<codedDiagnosis>
+					<coding>
+						<code value="RU"/>
+						<display value="RU comments RU comments RU comments RU comments RU comments RU comments RU comments RU comments RU comments  &#xD;&#xA; line break &#xA; line break 1"/>
+					</coding>
+				</codedDiagnosis>
+			</DiagnosticReport>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="214"/>
+				<status value="final"/>
+				<code>
+					<coding>
+						<system value="IMMUNOLOGY"/>
+						<code value="IgE"/>
+						<display value="Total IgE"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/155"/>
+				</performer>
+				<!-- For numeric results, valueQuantity node should be used -->
+				<valueQuantity>
+					<value value="6.1"/>
+					<comparator value="&lt;"/>
+					<unit value="umol/L"/>
+				</valueQuantity>
+				<!-- <valueString value="&lt;1.1"/> -->
+				<!-- <valueString value="&gt;=1.1"/> -->
+				<interpretation>
+					<coding>
+						<code value="AD"/>
+						<display value="Analysis comment AD "/>
+					</coding>
+					<coding>
+						<code value="AE"/>
+						<display value="Analysis comment AE"/>
+					</coding>
+					<coding>
+						<code value="AT"/>
+						<display value="Analysis comment AT  "/>
+					</coding>
+					<coding>
+						<code value="AI"/>
+						<display value="Analysis comment AI  "/>
+					</coding>
+					<coding>
+						<code value="AK"/>
+						<display value="Analysis comment AK  "/>
+					</coding>
+				</interpretation>
+				<!-- <comments value="Investigation comments"/> -->
+				<referenceRange>
+					<low>
+						<value value="2"/>
+					</low>
+					<high>
+						<value value="8"/>
+					</high>
+					<!-- The reference text will be provided by BizTalk -->
+					<text value="2-8"/>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="217"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="ISACCREDITED"/>
+						</coding>
+					</type>
+					<value value="TRUE"/>
+				</identifier>
+				<status value="amended"/>
+				<code>
+					<coding>
+						<system value="IMMUNOLOGY"/>
+						<code value="ENA"/>
+						<display value="ENA Screen (FEIA)"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/150"/>
+				</performer>
+				<valueQuantity>
+					<value value="1.1"/>
+					<comparator value="&gt;"/>
+					<unit value="umol/L"/>
+				</valueQuantity>
+				<interpretation>
+					<coding>
+						<code value="AI"/>
+						<display value="Analysis comment AI"/>
+					</coding>
+					<coding>
+						<code value="AK"/>
+						<display value="Analysis comment AK"/>
+					</coding>
+					<coding>
+						<code value="AT"/>
+						<display value="Analysis comment AT "/>
+					</coding>
+				</interpretation>
+				<comments value="Investigation comments"/>
+				<specimen>
+					<!-- Specimen referenced in Observation will be used for displaying collection date time -->
+					<reference value="Specimen/100000029393"/>
+				</specimen>
+				<referenceRange>
+					<high>
+						<value value="1.2"/>
+					</high>
+					<text value="&lt;=1.2"/>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Observation>
+				<id value="215"/>
+				<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="PATHOMARK"/>
+						</coding>
+					</type>
+					<value value="*"/>
+				</identifier>
+					<identifier>
+					<use value="official"/>
+					<type>
+						<coding>
+							<code value="ISACCREDITED"/>
+						</coding>
+					</type>
+					<value value="TRUE"/>
+				</identifier>
+				<status value="amended"/>
+				<code>
+					<coding>
+						<system value="IMMUNOLOGY"/>
+						<code value="AnaA"/>
+						<display value="Analysis A"/>
+					</coding>
+				</code>
+				<performer>
+					<reference value="Practitioner/157"/>
+				</performer>
+				<valueQuantity>
+					<value value="5.1"/>
+					<comparator value="&gt;="/>
+					<unit value="umol/L"/>
+				</valueQuantity>
+				<!-- <valueQuantity> -->
+					<!-- <value value="5.1"/> -->
+					<!-- <comparator value="&gt;"/> -->
+					<!-- <unit value="umol/L"/> -->
+				<!-- </valueQuantity> -->
+				<interpretation>
+					<coding>
+						<code value="AI"/>
+						<display value="Analysis comment AI"/>
+					</coding>
+					<coding>
+						<code value="AK"/>
+						<display value="Analysis comment AK"/>
+					</coding>
+					<coding>
+						<code value="AT"/>
+						<display value="Analysis comment AT "/>
+					</coding>
+				</interpretation>
+				<comments value="Investigation comments"/>
+				<referenceRange>
+					<low>
+						<value value="10.5"/>
+					</low>
+					<high>
+						<value value="20"/>
+					</high>
+					<text value="10.5-20"/>
+				</referenceRange>
+			</Observation>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="1"/>
+				<identifier>
+					<use value="usual"/>
+					<value value="1"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value="BMA Signature"/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Patient>
+				<id value="-190805898780" />
+				<identifier>
+					<type>
+						<coding>
+							<code value="F" />
+						</coding>
+						<text value="Permanent" />
+					</type>
+					<value value="-190805898780" />
+				</identifier>
+				<name>
+					<use value="official" />
+					<text value=" James Charles Lewis RoS Martini Rajini Iyyer" />
+					<family value="James" />
+					<given value="Charles Lewis RoS Martini Rajini Iyyer" />
+				</name>
+				<gender value="male" />
+				<birthDate value="1952-01-13" />
+				<address>
+					<use value="home" />
+					<line value="TORPSROGATAN 2 C LGH 1001" />
+					<city value="FRÄNSTA" />
+					<postalCode value="84012" />
+				</address>
+			</Patient>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="150"/>
+				<identifier>
+					<use value="usual"/>
+					<value value="1"/>
+				</identifier>
+				<name>
+					<use value="official"/>
+					<text value="BMA Signature for 150"/>
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<!-- Specimen referenced in Observation will be used for displaying collection date time -->
+	<entry>
+		<resource>
+			<Specimen>
+				<id value="100000029393"/>
+				<subject>
+					<reference value="Patient/-190805898780"/>
+				</subject>
+				<collection>
+					<collectedDateTime value="2017-05-10T09:05:31+00:00"/>
+				</collection>
+			</Specimen>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Order>
+				<id value="IMM"/>
+				<identifier>
+					<use value="official"/>
+					<assigner>
+						<reference value="Organization/REQ1"/>
+					</assigner>
+				</identifier>
+				<identifier>
+					<use value="secondary"/>
+					<type>
+						<coding>
+							<code value="PROVIDERLID"/>
+						</coding>
+					</type>
+					<value value="1233356"/>
+				</identifier>
+				<date value="2017-05-10T09:05:31+00:00"/>
+				<subject>
+					<reference value="Patient/-190805898780"/>
+				</subject>
+				<source>
+					<reference value="Practitioner/946"/>
+				</source>
+				<target>
+					<reference value="Organization/PROV1"/>
+				</target>
+				<detail>
+					<reference value="DiagnosticOrder/1"/>
+				</detail>
+			</Order>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<!-- The number of DiagnosticOrder nodes will be equal to the number of investigations ordered -->
+			<DiagnosticOrder>
+				<id value="1"/>
+				<subject>
+					<reference value="Patient/-190805898780"/>
+				</subject>
+				<status value="requested"/>
+				<priority value="routine"/>
+				<item>
+					<code>
+						<coding>
+							<system value="IMMUNOLOGY"/>
+							<code value="ENA"/>
+							<display value="ENA Screen (FEIA)"/>
+						</coding>
+					</code>
+				</item>
+			</DiagnosticOrder>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Practitioner>
+				<id value="946" />
+				<identifier>
+					<use value="usual" />
+					<value value="12" />
+				</identifier>
+				<name>
+					<use value="official" />
+					<text value="Birger Sandzen" />
+				</name>
+			</Practitioner>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Organization>
+				<id value="REQ1" />
+				<identifier>
+					<use value="official" />
+					<value value="USKI1:LO" />
+				</identifier>
+				<type>
+					<coding>
+						<code value="CARE" />
+					</coding>
+				</type>
+				<name value="Kirurg avd 1" />
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Organization>
+				<id value="PROV1" />
+				<identifier>
+					<use value="official" />
+					<value value="KIMM1LO" />
+				</identifier>
+				<type>
+					<coding>
+						<code value="PROVIDER" />
+					</coding>
+				</type>
+				<name value="Immunologi" />
+				<partOf>
+					<reference value="Organization/INST1" />
+				</partOf>
+			</Organization>
+		</resource>
+	</entry>
+	<entry>
+		<resource>
+			<Organization>
+				<id value="INST1" />
+				<type>
+					<coding>
+						<code value="INST" />
+					</coding>
+				</type>
+				<name value="Laboratoriemedicin vid Universitetssjukhuset i Umeå" />
+			</Organization>
+		</resource>
+	</entry>
+</Bundle>

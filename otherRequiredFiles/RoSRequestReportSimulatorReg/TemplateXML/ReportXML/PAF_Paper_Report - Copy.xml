@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+  <type value="message"/>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="REPORT"/>
+        <identifier value="ABA21F0A42A5447A99FF787BBFE01BBB"/>
+        <timestamp value="2017-06-26T12:11:52"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="2"/>
+          <code value="diagnosticreport-provide"/>
+          <display value="PafRemissSvar"/>
+        </event>
+        <source>
+          <name value="USFYLA"/>
+          <endpoint value="USFYLA"/>
+        </source>
+        <destination>
+          <name value="RoS"/>
+          <endpoint value="RoS"/>
+        </destination>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <transactionResponse>
+      <status value="PARTIAL"/>
+    </transactionResponse>
+  </entry>
+  <entry>
+    <resource>
+      <DiagnosticReport>
+        <!-- The findings and interpretation of diagnostic tests performed on patient. 
+                                             and formatted representation of diagnostic reports. -->
+        <id value="0B492DF6-8734-4DC9-947B-2B2D0074173E"/>
+        <name>
+          <text value="PAF investigations"/>
+        </name>
+        <status value="partial"/>
+        <!-- The status of the diagnostic report as a whole. For status use http://www.hl7.org/fhir/2015May/diagnostic-report-status.html   -->
+        <issued value="2017-06-26T12:11:52"/>
+        <subject>
+          <reference value="Patient\192408079339"/>
+          <!-- reference to a patient although not a valid url - in future this could be a reference to a service in pas -->
+        </subject>
+        <performer>
+          <reference value="Organization\PAFSYS"/>
+          <!-- The performing system/organization that is responsible for the conclusion. -->
+        </performer>
+        <identifier>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <code value="ProviderLID"/>
+            </coding>
+          </type>
+          <value value="SEFUME14TEST123"/>
+        </identifier>
+        <!-- The RoS internal Id for the ordered investigation and/or analysis -->
+        <serviceCategory>
+          <coding>
+            <system value="http://www.hl7.org/fhir/2015May/valueset-diagnostic-service-sections.html"/>
+            <code value="OTH"/>
+            <display value="FYS"/>
+          </coding>
+        </serviceCategory>
+        <!--  The section or category  of the diagnostic service that performs the examination e.g. biochemistry, hematology, MRI use http://www.hl7.org/fhir/2015May/valueset-diagnostic-service-sections.html 
+                                                                  For Physiology use OTH (other) -->
+        <diagnosticDateTime value="2017-06-26T12:11:52"/>
+        <!-- The dateTime when an investigation was done (Utford_Datum)-->
+        <result>
+          <reference value="Observation\212"/>
+        </result>
+        <result>
+          <reference value="Observation\214"/>
+        </result>
+        <!-- a reference to result of an observation/investigation/analysis -->
+        <conclusion value="  ( &quot;  ( ) * +  latest 212 EKO STANDARD    2014-10-01    ( NR: 14-7 )Utfört av Fyslab umeå. Eko-dopplerkardiografisk undersökning av kardiell embolikälla:Samtliga hjärtrum är normalstora. Ordinär vänsterkammarfunktion. Aorta- och mitralisklaffarna är tunna och rör sig ordinärt. Med doppler registreras normala klaffunktioner. Inga tromber eller vegetationer synliga. Bedömning: Inga hållpunkter för kardiell embolikälla. Inga tromber eller vegetationer synliga. Undersökningen ger inga hållpunkter för endokardit.  UTFÖRT av  ingenjör Jan Möller SIGNERAT  2014-10-01  Läkare Johan Medicus  K202 EKOKARDIOGRAFI DOPPLER    2014--10-01    ( NR: 13-16161 )&lt;br/&gt;Normalstor vänsterkammare med global systolisk funktion i nedre delen av normalområdet, EF 50%. S-formad septum som basalt uppmäts till ca 14 mm (lätt hypertrofierat) och normaltjock bakvägg. Regionala väggrörelsestörningar enligt skiss ovan. Vänster förmak i övre delen av normalområdet och normalstor höger förmak. Normalstor högerkammare med god pumpförmåga. Aortaklaffen är tricuspid och sklerotisk, men har god öppningsrörelse, övriga klaffar tämligen gracila. Aortaroten är normalvid. Vena cava inferior är normalvid och varierar ordinärt vid inandning.&lt;br/&gt;&lt;br/&gt;Med doppler ses en lindrig aortainsufficiens och en obetydlig mitralisinsufficiens. Tecken till lindrig diastolisk dysfunktion som vid relaxationsstörning. &lt;br/&gt;&lt;br/&gt;Bedömning: Status post infarkt. Vänsterkammarens globala pumpförmåga verkar tämligen bra, EF  ca 50%. Inga signifikanta klaffvitier.&lt;br/&gt;&lt;br/&gt;Undersökningen visad för och godkänd av Öl Esmat Raouf.&lt;br/&gt;SIGNERAT  2014-10-01  Biomedicinsk analytiker Charlotta Håkansson    /CHA013   /JM."/>
+        <!-- Concise and clinically contextualized narrative interpretation of the diagnostic report. The conclusion of the investigation -->
+      </DiagnosticReport>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="212"/>
+        <code>
+          <!--   Kind of observation/investigation = EKO STANDARD   -->
+          <coding>
+            <system value="PAFVLL"/>
+            <!--   Just a dummy as we are not using any standard for this currently  -->
+            <code value="212"/>
+            <display value="EKO STANDARD"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="final"/>
+        <!--   Performers details as shown in RoS (TBD - if BT/PAF agrees to returns this to RoS)  -->
+        <performer>
+          <display value="Charlotta Håkansson"/>
+        </performer>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="214"/>
+        <code>
+          <!--   Kind of observation/investigation = SPIROMETRI   -->
+          <coding>
+            <system value="PAFVLL"/>
+            <!--   Just a dummy as we are not using any standard for this currently  -->
+            <code value="214"/>
+            <display value="SPIROMETRI"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="final"/>
+        <!--   Performers details as shown in RoS (TBD - if BT/PAF agrees to returns this to RoS)  -->
+        <performer>
+          <display value="Charlotta Håkansson"/>
+        </performer>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Order>
+        <id value="PAFOrder"/>
+        <identifier>
+          <use value="official"/>
+          <!-- Mandatory -->
+          <assigner>
+            <reference value="Organization\REQUESTER1"/>
+          </assigner>
+        </identifier>
+        <!-- Mandatory -->
+        <date value="2017-06-26T12:11:52"/>
+        <!-- Mandatory -->
+        <subject>
+          <reference value="Patient\192408079339"/>
+        </subject>
+        <source>
+          <reference value="Practitioner\1047"/>
+        </source>
+        <!-- Mandatory -->
+        <target>
+          <reference value="Organization\PROVIDER1"/>
+        </target>
+        <reasonCodeableConcept>
+          <text value="patient has breathing problem"/>
+        </reasonCodeableConcept>
+        <when>
+          <code>
+            <coding>
+              <code value="Förtur"/>
+            </coding>
+          </code>
+        </when>
+        <!-- Mandatory (at least one) -->
+        <detail>
+          <reference value="DiagnosticOrder\212"/>
+        </detail>
+        <detail>
+          <reference value="DiagnosticOrder\213"/>
+        </detail>
+      </Order>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <DiagnosticOrder>
+        <id value="212"/>
+        <!-- Mandatory -->
+        <subject>
+          <reference value="Patient\192408079339"/>
+        </subject>
+        <clinicalNotes value="76-årig f d rökande man som arbetat inom galvaniseringsindustrin och byggnads. Nu inlagd p g a bröstsmärta.  Tacksam i samband med detta."/>
+        <supportingInformation>
+          <reference value="Observation\QA1" />
+        </supportingInformation>
+        <status value="requested"/>
+        <item>
+          <code>
+            <!--   Kind of observation/investigation = EKO STANDARD   -->
+            <coding>
+              <system value="PAFVLL"/>
+              <!--   Just a dummy as we are not using any standard for this currently  -->
+              <code value="LUSPIR"/>
+              <display value="Endast spirometri"/>
+            </coding>
+          </code>
+        </item>
+      </DiagnosticOrder>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <DiagnosticOrder>
+        <id value="213"/>
+        <!-- Mandatory -->
+        <subject>
+          <reference value="Patient\192408079339"/>
+        </subject>
+        <clinicalNotes value="76-årig f d rökande man som arbetat inom galvaniseringsindustrin och byggnads. Nu inlagd p g a bröstsmärta.  Tacksam i samband med detta."/>
+        <supportingInformation>
+          <reference value="Observation\QA3" />
+        </supportingInformation>
+        <status value="requested"/>
+        <item>
+          <code>
+            <!--   Kind of observation/investigation = EKO STANDARD   -->
+            <coding>
+              <system value="PAFVLL"/>
+              <!--   Just a dummy as we are not using any standard for this currently  -->
+              <code value="AERGO"/>
+              <display value="Ergospirometri"/>
+            </coding>
+          </code>
+        </item>
+      </DiagnosticOrder>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Patient>
+        <id value="192408079339"/>
+        <!-- Mandatory -->
+        <identifier>
+          <use value="official"/>
+          <value value="192808049338"/>
+        </identifier>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Practitioner>
+        <id value="1047"/>
+        <identifier>
+          <use value="usual"/>
+          <value value="1047"/>
+        </identifier>
+        <name>
+          <use value="official"/>
+          <text value="Anders Arnerlöv"/>
+        </name>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="REQUESTER1"/>
+        <!-- Mandatory -->
+        <identifier>
+          <use value="official"/>
+          <value value="USKIR1:LO"/>
+        </identifier>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Organization>
+        <id value="PROVIDER1"/>
+        <!-- Mandatory -->
+        <identifier>
+          <use value="official"/>
+          <value value="USFYLA"/>
+        </identifier>
+        <!-- Mandatory -->
+        <type>
+          <coding>
+            <code value="PROVIDER"/>
+          </coding>
+        </type>
+      </Organization>
+    </resource>
+  </entry>
+
+  <entry>
+    <resource>
+      <Observation>
+        <id value="QA3" />
+        <code>
+          <coding>
+            <system value="http://tieto.com" />
+            <code value="QA" />
+            <display value="Supporting Questions" />
+          </coding>
+          <text value="Antikoagulantia som fordrar kontroll av PK-INR?" />
+        </code>
+        <valueString value="Nej" />
+        <status value="final" />
+        <reliability value="ok" />
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="QA2" />
+        <code>
+          <coding>
+            <system value="http://tieto.com" />
+            <code value="QA" />
+            <display value="Supporting Questions" />
+          </coding>
+          <text value="sub ques 2?" />
+        </code>
+        <valueString value="Nej" />
+        <status value="final" />
+        <reliability value="ok" />
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="QA1" />
+        <code>
+          <coding>
+            <system value="http://tieto.com" />
+            <code value="QA" />
+            <display value="Supporting Questions" />
+          </coding>
+          <text value="Med artärblodprov via radialis kateter?" />
+        </code>
+        <valueString value="Nej" />
+        <status value="final" />
+        <reliability value="ok" />
+        <related>
+          <type value="has-component" />
+          <target>
+            <reference value="Observation\QA2" />
+          </target>
+        </related>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>

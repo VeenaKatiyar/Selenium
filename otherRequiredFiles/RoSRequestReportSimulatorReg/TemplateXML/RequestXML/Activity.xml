@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ActivityXML>
+  <SaveActivityInternalRequestActivity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Description xmlns="http://healthXML.org/RoSLink"> *$ S-Alat</Description>
+    <State xmlns="http://healthXML.org/RoSLink">REQUEST</State>
+    <Priority xmlns="http://healthXML.org/RoSLink">ROUTINE</Priority>
+    <CreateTime xmlns="http://healthXML.org/RoSLink">2015-04-24T18:39:34.8650509+05:30</CreateTime>
+    <PlannedTime xmlns="http://healthXML.org/RoSLink">2015-04-24T18:39:00</PlannedTime>
+    <Patient xmlns="http://healthXML.org/RoSLink">
+      <OfficialId>190805898780</OfficialId>
+    </Patient>
+    <Provider xmlns="http://healthXML.org/RoSLink">
+      <Id>1</Id>
+      <Name>1:LO</Name>
+    </Provider>
+    <Service xmlns="http://healthXML.org/RoSLink">KK-LAB</Service>
+    <WorkflowId xmlns="http://healthXML.org/RoSLink">INTERNAL_3</WorkflowId>
+    <UpdateCount xmlns="http://healthXML.org/RoSLink">0</UpdateCount>
+    <IdByProvider xmlns="http://healthXML.org/RoSLink">1:LO|34019291</IdByProvider>
+    <RequestSign xmlns="http://healthXML.org/RoSLink">false</RequestSign>
+    <SaveExistingDocument xmlns="http://healthXML.org/RoSLink">false</SaveExistingDocument>
+    <HCOrganization xmlns="http://healthXML.org/RoSLink">
+      <MedicalUnitId>25</MedicalUnitId>
+      <CareUnitId>107</CareUnitId>
+      <ResourceId>1047</ResourceId>
+    </HCOrganization>
+    <ActivityGUID xmlns="http://healthXML.org/RoSLink">0B85E01FAD1D45C9A0DEEC32609D29C0</ActivityGUID>
+    <FlagForChangeSampleWindow xmlns="http://healthXML.org/RoSLink">false</FlagForChangeSampleWindow>
+  </SaveActivityInternalRequestActivity>
+</ActivityXML>

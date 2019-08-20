@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="http://hl7.org/fhir" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <type value="message"/>
+  <entry>
+    <resource>
+      <MessageHeader>
+        <id value="STATUS"/>
+        <identifier value="ABA21F0A42A5447A99FF787BBFE01BBB"/>
+        <timestamp value="2016-07-19T17:05:52"/>
+        <event>
+          <system value="http://hl7.org/fhir/message-type"/>
+          <version value="2"/>
+          <code value="diagnosticreport-provide"/>
+          <display value="PafRemissSvarStatus"/>
+        </event>
+        <source>
+          <name value="1:KNeuroFys"/>
+          <endpoint value="1:KNeuroFys"/>
+        </source>
+        <destination>
+          <name value="RoS"/>
+          <endpoint value="RoS"/>
+        </destination>
+      </MessageHeader>
+    </resource>
+  </entry>
+  <entry>
+    <transactionResponse>
+      <status value="TIDBOKAD"/>
+    </transactionResponse>
+  </entry>
+  <entry>
+    <resource>
+      <OrderResponse xmlns="http://hl7.org/fhir">
+        <identifier>
+          <use value="secondary"/>
+          <type>
+            <coding>
+              <code value="ProviderLID"/>
+            </coding>
+          </type>
+          <value value="SEFVLL-0000001"/>
+        </identifier>
+        <date value="2016-07-19T17:05:52" />
+        <request>
+          <reference value="Order\B8F256BADB6C449C83B8ECBAE26B9FE1"/>
+        </request>
+        <who>
+          <reference value="Organization\RequesterOrganization"/>
+        </who>
+        <orderStatus value="completed"/>
+        <description value="Investigation time booked : 2016-07-18T17:05:52"/>
+        <fulfillment>
+          <reference value="Observation\101"/>
+        </fulfillment>
+        <fulfillment>
+          <reference value="Observation\102"/>
+        </fulfillment>
+      </OrderResponse>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="101"/>
+        <code>
+          <coding>
+            <system value="PAFVLL"/>
+            <code value="ARBEKO"/>
+            <display value="EKO STANDARD"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="registered"/>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <resource>
+      <Observation>
+        <id value="102"/>
+        <code>
+          <coding>
+            <system value="PAFVLL"/>
+            <code value="RULLMATTA"/>
+            <display value="Arbetsprov Rullmatta"/>
+          </coding>
+        </code>
+        <dataAbsentReason>
+          <coding>
+            <code value="astext"/>
+          </coding>
+        </dataAbsentReason>
+        <status value="registered"/>
+      </Observation>
+    </resource>
+  </entry>
+</Bundle>
